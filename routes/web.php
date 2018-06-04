@@ -1,5 +1,7 @@
 <?php
 
+use function foo\func;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function(){
+    return view('about');
+
+});
+
+Route::get('/fun/hi/{id}', 'FunController@Hi');
