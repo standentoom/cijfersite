@@ -14,7 +14,10 @@ use function foo\func;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
+});
+Route::get('/docent', function () {
+    return view('auth/login');
 });
 
 Route::get('/about', function(){
