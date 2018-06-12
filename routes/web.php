@@ -16,13 +16,11 @@ use function foo\func;
 Route::get('/', function () {
     return view('auth/login');
 });
+Route::get('/student', function () {
+    return view('student');
+});
 Route::get('/docent', function () {
     return view('auth/login');
-});
-
-Route::get('/about', function(){
-    return view('about');
-
 });
 
 Route::get('/fun/hi/{id}', 'FunController@Hi');
