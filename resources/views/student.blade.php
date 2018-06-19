@@ -14,7 +14,6 @@
     @yield('js')
 @stop
 
-
 <html lang="en">
 
 <head>
@@ -30,6 +29,9 @@
 @section('body')
 <h2>Hier je persoonlijke cijfers</h2>
 
+<h1></h1>
+
+
 <table class="display data-table">
     <thead>
         <tr>
@@ -38,16 +40,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Nederlands</td>
-            <td>9.2</td>
-        </tr>
-        <tr>
-            <td>Engels</td>
-            <td>9.9</td>
-        </tr>
+    @foreach($grades as $grade)
+    <tr>
+     <td>{{ $grade->course }}</td>
+     <td>{{$grade->score}}</td>
+     </tr>
+    @endforeach   
     </tbody>
 </table>
+ 
 @stop 
 
 
