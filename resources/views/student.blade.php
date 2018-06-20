@@ -1,18 +1,5 @@
 @extends('adminlte::master')
 
-<!-- <script src="{{ asset('vendor/adminlte/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script> -->
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-
-
-@section('adminlte_js')
-    
-    <script>
-        $(document).ready(function () {
-            $('.data-table').dataTable();
-        });
-</script>
-    @yield('js')
-@stop
 
 <html lang="en">
 
@@ -27,28 +14,31 @@
 
 
 @section('body')
-<h2>Hier je persoonlijke cijfers</h2>
-
-<h1></h1>
-
-
-<table class="display data-table">
-    <thead>
+   
+    <table class="display data-table">
+        <thead>
+            <tr>
+                <th>Schoolvak</th>
+                <th>Cijfers</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($grades as $grade)
         <tr>
-            <th>Schoolvak</th>
-            <th>Cijfers</th>
+        <td>{{ $grade->course }}</td>
+        <td>{{$grade->score}}</td>
         </tr>
-    </thead>
-    <tbody>
-    @foreach($grades as $grade)
-    <tr>
-     <td>{{ $grade->course }}</td>
-     <td>{{$grade->score}}</td>
-     </tr>
-    @endforeach   
-    </tbody>
-</table>
- 
+        @endforeach   
+        </tbody>
+    </table>
+        @section('adminlte_js')
+            <script>
+                $(document).ready(function () {
+                    $('.data-table').dataTable();
+                });
+        </script>
+            @yield('js')
+        @stop
 @stop 
 
 
