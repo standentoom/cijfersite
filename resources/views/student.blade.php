@@ -18,10 +18,9 @@
         <img alt="Cijfersite" src="...">
       </a>
     </div>
-    <p class="navbar-text navbar-right">Signed in as Jordy</p>
+    <p class="navbar-text navbar-right">Signed in as PLACEHOLDER</p>
   </div>
 </nav>
-
 
     <table class="display data-table">
         <thead>
