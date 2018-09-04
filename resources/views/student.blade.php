@@ -34,7 +34,7 @@
         @foreach($grades as $grade)
         <tr>
         <td>{{ $grade->course }}</td>
-        <td>{{$grade->score}}</td>
+        <td>{{ $grade->score }}</td>
         </tr>
         @endforeach   
         </tbody>
