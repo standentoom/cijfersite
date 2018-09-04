@@ -37,7 +37,7 @@ Route::get('sendemail', function () {
 
         $message->from('cijfersssite@gmail.com', 'Learning Laravel');
 
-        $message->to('toomstan@gmail.com.com')->subject('Learning Laravel test email');
+        $message->to('toomstan@gmail.com')->subject('Learning Laravel test email');
 
     });
 
