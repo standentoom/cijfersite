@@ -11,8 +11,9 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('courses')->insert([
-            'Name' => str_random(10),
+         DB::table('cijfers')->insert([
+            'score' => rand(1,10),
+            'course' => str_random(10),
             'created_at' =>  date("Y-m-d"),
             'updated_at' =>  date("Y-m-d")
         ]);

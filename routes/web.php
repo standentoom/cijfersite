@@ -23,24 +23,8 @@ Route::get('/docent', function () {
     return view('auth/login');
 });
 Route::get('/student', 'studentController@getGrades');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('sendemail', function () {
-
-    $data = array(
-        'name' => "Learning Laravel",
-    );
-
-    Mail::send('emails.welcome', $data, function ($message) {
-
-        $message->from('cijfersssite@gmail.com', 'Learning Laravel');
-
-        $message->to('toomstan@gmail.com')->subject('Learning Laravel test email');
-
-    });
-
-    return "Your email has been sent successfully";
-
-});
