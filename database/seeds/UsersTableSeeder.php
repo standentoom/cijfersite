@@ -11,9 +11,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('cijfers')->insert([
-            'score' => rand(1,10),
-            'course' => str_random(10),
+         DB::table('users')->insert([
+            'name' => "Jordy",
+            'email' => "jordylock17@outlook.com",
+            'password' =>  "poepjes123",
+            'teacher' =>  0,
+            'remember_token' => str_random(50),
             'created_at' =>  date("Y-m-d"),
             'updated_at' =>  date("Y-m-d")
         ]);
