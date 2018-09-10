@@ -16,13 +16,16 @@ use function foo\func;
 Route::get('/', function () {
     return view('auth/login');
 });
-// Route::get('/student', function () {
-//     return view('student');
-// });
+
+Route::get('/student', function () {
+    return view('student');
+});
+
 Route::get('/docent', function () {
     return view('auth/login');
 });
-Route::get('/student', 'studentController@getGrades');
+
+Route::get('/cijfers', 'GradesController@getGrades');
 
 Auth::routes();
 

@@ -7,12 +7,11 @@ use Illuminate\Support\Facades\DB;
 
 class studentController extends Controller
 {
-    public function getGrades(){
+    // public function getGrades(){
 
-        $grades = DB::table('cijfers')->get();
-       return view('/student', ['grades'=>$grades]);
+    //     $grades = DB::table('cijfers')->get();
+    //    return view('/cijfers', ['grades'=>$grades]);
   
-    }
+    // }
     
-
 }

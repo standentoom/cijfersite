@@ -22,34 +22,4 @@
   </div>
 </nav>
 
-    <table class="display data-table">
-        <thead>
-            <tr>
-                <th>Schoolvak</th>
-                <th>Cijfers</th>
-            </tr>
-        </thead>
-        <tbody>
-        @foreach($grades as $grade)
-        <tr>
-        <td>{{ $grade->course }}</td>
-        <td>{{ $grade->score }}</td>
-        </tr>
-        @endforeach   
-        </tbody>
-    </table>
-        @section('adminlte_js')
-            <script>
-                $(document).ready(function () {
-                    $('.data-table').dataTable();
-                });
-        </script>
-            @yield('js')
-        @stop
-@stop 
-
-
-
-
-
 </html>
