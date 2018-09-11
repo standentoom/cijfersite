@@ -29,5 +29,5 @@ Route::get('/cijfers', 'GradesController@getGrades');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/docentenportaal', 'HomeController@index')->name('docentenportaal');
 
