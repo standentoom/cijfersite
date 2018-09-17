@@ -29,5 +29,13 @@ Route::get('/cijfers', 'GradesController@getGrades');
 
 Auth::routes();
 
-Route::get('/docentenportaal', 'HomeController@index')->name('docentenportaal');
+// Route::get('/docentenportaal', 'HomeController@index')->name('docentenportaal');
+
+Route::get('/docentenportaal', 'HomeController@index')->middleware('teacher');
+
+Route::get('/home', function (){
+
+	return view('home');
+
+});
 

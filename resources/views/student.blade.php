@@ -43,7 +43,11 @@
     </div>
 </nav>
 
-
+@if(session()->has('message'))
+    <div class="alert alert-danger">
+        {{ session()->get('message') }}
+    </div>
+@endif
 <h1>Welkom</h1>
 
 
