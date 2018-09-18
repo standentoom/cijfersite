@@ -25,7 +25,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
     if ( auth::user()->teacher == true ) {
-        return redirect('/docentenportaal');
+        return redirect('/docent');
     }
 
      return redirect('/student');

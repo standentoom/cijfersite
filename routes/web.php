@@ -31,7 +31,7 @@ Auth::routes();
 
 // Route::get('/docentenportaal', 'HomeController@index')->name('docentenportaal');
 
-Route::get('/docentenportaal', 'HomeController@index')->middleware('teacher');
+Route::get('/docent', 'HomeController@index')->middleware('teacher');
 
 Route::get('/home', function (){
 
