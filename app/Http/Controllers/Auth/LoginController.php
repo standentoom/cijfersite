@@ -22,14 +22,14 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    // protected function authenticated(Request $request, $user)
-    // {
-    // if ( auth::user()->teacher == true ) {
-    //     return redirect('/docentenportaal');
-    // }
+    protected function authenticated(Request $request, $user)
+    {
+    if ( auth::user()->teacher == true ) {
+        return redirect('/docentenportaal');
+    }
 
-    //  return redirect('/student');
-    // }
+     return redirect('/student');
+    }
 
 
     /**
@@ -42,7 +42,7 @@ class LoginController extends Controller
 
 
 
-    protected $redirectTo = '/student';
+    // protected $redirectTo = '/student';
 
 
     /**
