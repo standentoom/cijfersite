@@ -25,6 +25,10 @@ Route::get('/docent', function () {
     return view('auth/login');
 });
 
+Route::get('/admin', function () {
+    return view('admin');
+});
+
 Route::get('/cijfers', 'GradesController@getGrades');
 
 Auth::routes();
